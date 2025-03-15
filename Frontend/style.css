@@ -1,0 +1,280 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Fix */
+.navbar {
+    border-bottom: 3px solid #28a745;
+    position: fixed; /* Fixed navbar to the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar stays above other content */
+    background-color: white; /* Ensure background is white */
+    padding: 10px 0; /* Padding for navbar */
+}
+
+/* Adjust body padding to account for fixed navbar */
+body {
+    padding-top: 60px; /* Ensure content starts below the navbar (adjust based on navbar height) */
+}
+
+/* Add margin to the first section to avoid overlap */
+.container {
+    width: 100%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 60px; /* Add margin-top to ensure the section is pushed down */
+}
+.space{
+    padding: 20px;
+
+}
+
+/* Heading Style */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form Styles */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#clinicForm button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#clinicForm button:hover {
+    background: #218838;
+}
+
+/* Record List */
+.record-list {
+    margin-top: 20px;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.record {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.record:last-child {
+    border-bottom: none;
+}
+
+#searchInput {
+    margin-bottom: 10px;
+}
+
+/* Carousel Image Height */
+#carouselExample .carousel-inner .carousel-item img {
+    height: 50vh;
+    object-fit: cover; /* Ensure the image covers the area properly */
+}
+
+/* Dark Overlay for Carousel */
+#carouselExample button:hover {
+    background: transparent;
+}
+
+.carousel-item::before {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+}
+
+.carousel{
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 60px; /* Add margin-top to ensure the section is pushed down */
+    
+}
+
+
+
+/* Login Container */
+.login-container {
+ 
+
+    max-width: 400px;
+    width: 100%; /* Make the container responsive */
+    margin-top: 50px; /* Adjusted for better positioning */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for the container */
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-container button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #218838;
+}
+
+
+
+
+/* Responsive Styles */
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .carousel-item img {
+        height: 40vh; /* Make carousel images smaller on mobile */
+    }
+
+    .login-container {
+        margin-top: 30px; /* Adjusted for better spacing on mobile */
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem; /* Smaller font size for mobile devices */
+    }
+
+    #clinicForm button {
+        font-size: 14px;
+    }
+    
+    .record-list {
+        margin-top: 10px;
+    }
+}
+
+/* Tablet Devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .carousel-item img {
+        height: 50vh; /* Keep carousel images at 50vh on tablet */
+    }
+
+    .login-container {
+        margin-top: 50px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 3rem; /* Slightly smaller font size for tablets */
+    }
+
+    #clinicForm button {
+        font-size: 15px;
+    }
+}
+
+/* Desktop Devices */
+@media (min-width: 1025px) {
+    .carousel-item img {
+        height: 50vh; /* Keep carousel images at 50vh on desktop */
+    }
+
+    .login-container {
+        margin-top: 100px; /* Adjusted for desktop */
+    }
+
+    .carousel-caption h1 {
+        font-size: 4rem; /* Larger font size for desktop */
+    }
+
+    #clinicForm button {
+        font-size: 16px;
+    }
+}
+
+
+
+
+#profile .form-control:focus {
+    box-shadow: none;
+    border-color: #218838;
+}
+
+#profile .profile-button {
+    background: #218838;
+    box-shadow: none;
+    border: none
+}
+
+#profile .profile-button:hover {
+    background: #218838;
+}
+
+#profile .profile-button:focus {
+    background: #218838;;
+    box-shadow: none
+}
+
+#profile .profile-button:active {
+    background: #218838;;
+    box-shadow: none
+}
+
+#profile .back:hover {
+    color: #218838;;
+    cursor: pointer
+}
+
+#profile .labels {
+    font-size: 11px
+}
+
+#profile .add-experience:hover {
+    background: #218838;;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #218838;
+}

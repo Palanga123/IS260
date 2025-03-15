@@ -3,9 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clinic UI System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+  
 </head>
 <body>
-    Hello World
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="clip2.jpg" class="d-block" width="150" alt="...">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Clinic</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="record.html">Record</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="chnagepassword.html">Change Password</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+  
+
+      <!--end navigation bar -->
+      <!-- slider -->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="bg2.jpg" class="d-block w-100" alt="bg2.jpg">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="bg2.jpg" class="d-block w-100" alt="bg3.jpeg">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="bg2.jpg" class="d-block w-100" alt="bg2.jpg">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      
+
+      <!-- end slider -->
+<!-- //form -->
+<div id="clinicForm" class="container form-control">
+    <h2>Clinic Patient Form</h2>
+    <form id="clinicForm">
+        <label for="clinicalNumber">Clinical Number (Unique ID):</label>
+        <input type="text" id="clinicalNumber" placeholder="Enter unique clinical number" required>
+
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" placeholder="Enter patient's name" required>
+
+        <label for="medicalReport">Medical Report:</label>
+        <textarea id="medicalReport" rows="4" placeholder="Enter medical report" required></textarea>
+
+        <label for="prescription">Medical Prescription:</label>
+        <textarea id="prescription" rows="4" placeholder="Enter prescription details" required></textarea>
+
+        <label for="checkupDate">Check-up Date:</label>
+        <input type="date" id="checkupDate" required>
+
+        <label for="prevAppointment">Previous Appointment Date:</label>
+        <input type="date" id="prevAppointment" required>
+
+        <button type="submit">Save Patient Record</button>
+    </form>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadRecords(); // Load records on page load
+
+        document.getElementById("clinicForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            let clinicalNumber = document.getElementById("clinicalNumber").value.trim();
+            let patientName = document.getElementById("patientName").value.trim();
+            let medicalReport = document.getElementById("medicalReport").value.trim();
+            let prescription = document.getElementById("prescription").value.trim();
+            let checkupDate = document.getElementById("checkupDate").value;
+            let prevAppointment = document.getElementById("prevAppointment").value;
+
+            // Validate input fields
+            if (!clinicalNumber || !patientName || !medicalReport || !prescription || !checkupDate || !prevAppointment) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Get stored records from local storage or initialize an empty array
+            let records = JSON.parse(localStorage.getItem("patientRecords")) || [];
+
+            // Check if clinical number already exists
+            if (records.some(record => record.clinicalNumber === clinicalNumber)) {
+                alert("A patient with this Clinical Number already exists!");
+                return;
+            }
+
+            // Create patient record object
+            let patientRecord = {
+                clinicalNumber: clinicalNumber,
+                name: patientName,
+                report: medicalReport,
+                prescription: prescription,
+                checkupDate: checkupDate,
+                prevAppointment: prevAppointment
+            };
+
+            records.push(patientRecord);
+
+            // Save updated records to local storage
+            localStorage.setItem("patientRecords", JSON.stringify(records));
+
+            // Reset form
+            document.getElementById("clinicForm").reset();
+
+            // Reload displayed records
+            loadRecords();
+        });
+    });
+
+    function loadRecords() {
+        let records = JSON.parse(localStorage.getItem("patientRecords")) || [];
+        let recordsContainer = document.getElementById("records");
+        recordsContainer.innerHTML = ""; // Clear previous records
+
+        if (records.length === 0) {
+            recordsContainer.innerHTML = "<p>No patient records found.</p>";
+            return;
+        }
+
+        records.forEach((record, index) => {
+            let recordDiv = document.createElement("div");
+            recordDiv.classList.add("record");
+            recordDiv.setAttribute("data-clinical-number", record.clinicalNumber);
+            recordDiv.innerHTML = `
+                <strong>Clinical Number:</strong> ${record.clinicalNumber} <br>
+                <strong>Patient Name:</strong> ${record.name} <br>
+                <strong>Medical Report:</strong> ${record.report} <br>
+                <strong>Prescription:</strong> ${record.prescription} <br>
+                <strong>Check-up Date:</strong> ${record.checkupDate} <br>
+                <strong>Previous Appointment:</strong> ${record.prevAppointment} <br>
+                <button onclick="deleteRecord(${index})" style="background: red; margin-top: 10px;">Delete</button>
+            `;
+            recordsContainer.appendChild(recordDiv);
+        });
+    }
+
+    function deleteRecord(index) {
+        let records = JSON.parse(localStorage.getItem("patientRecords")) || [];
+        records.splice(index, 1); // Remove record at index
+        localStorage.setItem("patientRecords", JSON.stringify(records));
+        loadRecords(); // Reload displayed records
+    }
+
+    function searchRecord() {
+        let searchQuery = document.getElementById("searchInput").value.trim();
+        let records = document.querySelectorAll(".record");
+
+        records.forEach(record => {
+            let clinicalNumber = record.getAttribute("data-clinical-number");
+            if (clinicalNumber.includes(searchQuery)) {
+                record.style.display = "block"; // Show matching record
+            } else {
+                record.style.display = "none"; // Hide non-matching records
+            }
+        });
+    }
+</script>
+
 </body>
 </html>
